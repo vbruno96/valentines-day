@@ -1,0 +1,111 @@
+body {
+  background: #001214;
+  color: #DDD;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+}
+
+#card {
+  position: absolute;
+  top: 6.25rem;
+  left: 50%;
+  width: 28.75rem;
+  transform: translateX(-50%);
+}
+
+#card h1 {
+  text-align: center;
+}
+
+#card .heart {
+  width: 16.25rem;
+  height: 16.25rem;
+  float: left;
+}
+
+#card .heart #circle {
+  width: 8.125rem;
+  height: 8.125rem;
+  background: #dc1402;
+  border-radius: 50%;
+}
+
+#card .heart #rec, #card .heart #rec2 {
+  margin-top: -3.75rem;
+  width: 8.125rem;
+  height: 8.125rem;
+  background: #dc1402;      
+  border-radius: 35% 0 0 0;
+}
+
+#card .heart #half2 {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  margin-top: -20.625rem;
+  margin-left: -12.5rem;
+}
+
+#card #heart1 {
+  transform: rotate(180deg);
+  animation: closeLeft 2s ease-in-out forwards;
+}
+
+#card #heart2 {
+  margin-top: -3.75rem;
+  margin-left: -8.125rem;
+  animation: closeRight 2s ease-in-out forwards;
+}
+
+#card:hover #heart1 {
+  animation: openLeft 2s ease-in-out forwards;
+}
+
+#card:hover #heart2 {
+  animation: openRight 2s ease-in-out forwards;
+}
+
+#card #heart2 #circle, #card #heart2 #rec {
+  background: #F0F0F0;
+}
+
+#card #heart2 #half2 #rec {
+  margin-bottom: -3.8125rem;
+}
+
+#card #message {
+  float: left;
+  width: 12.5rem;
+  height: 12.5rem;
+  background: #F0F0F0;
+  margin-left: -8.125rem;
+  border-radius: 35% 0 35% 0;
+  text-align: center;
+}
+
+#card #message h2 {
+  width: 10rem;
+  color: #001214;
+  margin-top: 3.75rem;
+  margin-left: 1rem;
+  font-size: 1.25rem;
+}
+
+@keyframes closeLeft {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(180deg); }
+}
+
+@keyframes openLeft {
+  from { transform: rotateY(180deg); }
+  to { transform: rotateY(0deg); }
+}
+
+@keyframes openRight {
+  from { transform: rotateX(180deg); }
+  to { transform: rotateX(0deg) rotateZ(180deg); }
+}
+
+@keyframes closeRight {
+  from { transform: rotateX(0deg) rotate(180deg); }
+  to { transform: rotateX(180deg); }
+}
