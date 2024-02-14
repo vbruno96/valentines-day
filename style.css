@@ -1,7 +1,7 @@
 body {
   background: #001214;
   color: #DDD;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Pacifico', sans-serif;
   height: 100vh;
 }
 
@@ -46,13 +46,14 @@ body {
 }
 
 #card #heart1 {
-  transform: rotate(180deg);
+  transform: rotateY(180deg);
   animation: closeLeft 2s ease-in-out forwards;
 }
 
 #card #heart2 {
   margin-top: -3.75rem;
   margin-left: -8.125rem;
+  transform: rotateX(180deg);
   animation: closeRight 2s ease-in-out forwards;
 }
 
@@ -101,11 +102,11 @@ body {
 }
 
 @keyframes openRight {
-  from { transform: rotateX(180deg); }
-  to { transform: rotateX(0deg) rotateZ(180deg); }
+  from { transform: rotateY(0deg) rotateX(180deg); }
+  to { transform: rotateY(180deg) rotateX(180deg); }
 }
 
 @keyframes closeRight {
-  from { transform: rotateX(0deg) rotate(180deg); }
-  to { transform: rotateX(180deg); }
+  from { transform: rotateY(180deg) rotateX(180deg); }
+  to { transform: rotateY(0deg) rotateX(180deg); }
 }
